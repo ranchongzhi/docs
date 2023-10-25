@@ -2114,6 +2114,40 @@ scatter_nd_add(index, updates, name=None)
 
 请参考 :ref:`cn_api_paddle_scatter_nd_add`
 
+masked_scatter(x, mask, value)
+:::::::::
+
+参数：
+    - **x** (Tensor) - 输入的Tensor。
+    - **mask** (Tensor|bool) - 指定需要被替换的位置。
+    - **value** (Tensor) - 替换的值，类型为 Tensor 或者 numpy\.array。
+
+**代码示例**
+    .. code-block:: python
+            
+            >>> import paddle
+            >>> x = paddle.randn([3,4])
+            >>> mask = paddle.to_tensor([1.,0.5,1.,0.5]) > 0.5
+            >>> value = paddle.ones([2,4], dtype="float32")
+            >>> result = masked_scatter(x, mask, value)
+            >>> print(result)
+            Tensor(shape=[3, 4], dtype=float32, place=Place(gpu:0), stop_gradient=False,
+            [[ 1.        , -2.59757781,  1.        , -2.37750435],
+             [ 1.        , -0.11681330,  1.        ,  0.56991023],
+             [ 1.        ,  2.51356053,  1.        ,  0.67361248]]) 
+
+
+返回：替换后的 Tensor
+
+返回类型：Tensor
+
+请参考 :ref:`cn_api_paddle_masked_scatter`
+
+masked_scatter_(x, mask, value)
+:::::::::
+
+Inplace版本的 :ref:`cn_api_paddle_masked_scatter`API, 对输入x采用inplace策略。
+
 set_value(value)
 :::::::::
 

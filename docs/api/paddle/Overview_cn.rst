@@ -355,6 +355,7 @@ tensor 元素操作相关（如：转置，reshape 等）
     " :ref:`paddle.gather_nd <cn_api_paddle_gather_nd>` ", "paddle.gather 的高维推广"
     " :ref:`paddle.reshape <cn_api_paddle_reshape>` ", "在保持输入 x 数据不变的情况下，改变 x 的形状"
     " :ref:`paddle.roll <cn_api_paddle_roll>` ", "沿着指定维度 axis 对输入 x 进行循环滚动，当元素移动到最后位置时，会从第一个位置重新插入"
+    " :ref:`paddle.masked_scatter <cn_api_paddle_masked_scatter>` ", "将目标 tensor 中 mask 为 True 的位置替换为原 tensor 的数值"
     " :ref:`paddle.scatter <cn_api_paddle_distributed_scatter>` ", "通过基于 updates 来更新选定索引 index 上的输入来获得输出"
     " :ref:`paddle.scatter_nd <cn_api_paddle_scatter_nd>` ", "根据 index ，将 updates 添加到一个新的张量中，从而得到输出的 Tensor"
     " :ref:`paddle.scatter_nd_add <cn_api_paddle_scatter_nd_add>` ", "通过对 Tensor 中的单个值或切片应用稀疏加法，从而得到输出的 Tensor"
@@ -395,7 +396,8 @@ tensor 元素操作相关原位（inplace）版本
     :widths: 10, 30
 
     " :ref:`paddle.reshape_ <cn_api_paddle_reshape_>` ", "Inplace 版本的 reshape API，对输入 x 采用 Inplace 策略"
-    " :ref:`paddle.scatter_ <cn_api_paddle_scatter_>` ", "Inplace 版本的 scatter API，对输入 x 采用 Inplace 策略 "
+    " :ref:`paddle.masked_scatter_ <cn_api_paddle_masked_scatter_>` ", "Inplace 版本的 masked_scatter API，对输入 x 采用 Inplace 策略"
+    " :ref:`paddle.scatter_ <cn_api_paddle_scatter_>` ", "Inplace 版本的 scatter API，对输入 x 采用 Inplace 策略"
     " :ref:`paddle.squeeze_ <cn_api_paddle_squeeze_>` ", "Inplace 版本的 squeeze API，对输入 x 采用 Inplace 策略"
     " :ref:`paddle.unsqueeze_ <cn_api_paddle_unsqueeze_>` ", "Inplace 版本的 unsqueeze API，对输入 x 采用 Inplace 策略"
 
